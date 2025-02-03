@@ -1,0 +1,8 @@
+chain_steps:
+  - name: "Format Mathematical Content"
+    tasks: ["format_math_task"]
+    
+  - name: "Add Technical Diagrams"
+    tasks: ["create_diagrams_task"]
+    stop_at: "<!-- END -->"
+    max_iterations: 3 

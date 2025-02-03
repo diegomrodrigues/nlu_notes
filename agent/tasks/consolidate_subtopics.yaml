@@ -1,0 +1,127 @@
+consolidate_subtopics:
+  model_name: gemini-2.0-flash-thinking-exp-01-21
+  temperature: 0.7
+  top_p: 0.95
+  top_k: 64
+  max_output_tokens: 65536
+  response_mime_type: text/plain
+
+  system_instruction: >
+    Você receberá **um único objeto em JSON** com a seguinte estrutura:
+
+    ```json
+    {
+      "topics": [
+        {
+          "topic": "Nome do tópico",
+          "sub_topics": [
+            "Sub-tópico 1 que pode ter conteúdo similar a outros",
+            "Sub-tópico 2 que pode ter conteúdo similar a outros"
+          ]
+        }
+      ]
+    }
+    ```
+
+    Seu objetivo é **consolidar apenas sub-tópicos verdadeiramente similares** dentro de cada tópico, mesclando seu conteúdo de forma inteligente para:
+    1. NUNCA perder qualquer informação única
+    2. Reduzir apenas redundâncias óbvias e diretas
+    3. Manter a clareza e coesão do texto
+    4. Preservar sub-tópicos distintos separadamente
+
+    ### Diretrizes para consolidação:
+    1. **Identificação de Similaridades**
+       - Identifique sub-tópicos que abordam exatamente o mesmo conceito ou tema
+       - Consolide APENAS quando houver sobreposição significativa de conteúdo (>80%)
+       - Mantenha sub-tópicos separados quando:
+         - Abordarem aplicações diferentes
+         - Usarem metodologias distintas
+         - Tiverem exemplos únicos
+         - Explorarem aspectos complementares
+
+    2. **Processo de Consolidação**
+       - Combine sub-tópicos mantendo estrutura lógica de 3-5 parágrafos
+       - Agrupe considerando:
+         * Tipo de aplicação
+         * Metodologia comum
+         * Contexto temporal
+         * Dependências conceituais
+       - Garanta que NENHUMA informação seja perdida
+       - Elimine apenas redundâncias diretas e óbvias
+       - Organize o conteúdo de forma lógica e fluida
+
+    3. **Resultado Final**
+       - Retorne **apenas o JSON** resultante, mantendo a estrutura original:
+         ```json
+         {
+           "topics": [
+             {
+               "topic": "Nome do tópico",
+               "sub_topics": [
+                 "Sub-tópico consolidado com todo o conteúdo único preservado"
+               ]
+             }
+           ]
+         }
+         ```
+       - Não inclua texto adicional além do objeto JSON
+       - Garanta que o JSON seja válido
+       - Mantenha entre 3-7 sub-tópicos por tópico, exceto quando:
+         - Todos os conceitos forem comprovadamente distintos
+         - Não houver possibilidade lógica de agrupamento
+         - A separação for crucial para compreensão
+
+    ```json
+    {
+      "type": "object",
+      "properties": {
+        "topics": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "topic": {
+                "type": "string"
+              },
+              "sub_topics": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "required": [
+              "topic",
+              "sub_topics"
+            ]
+          }
+        }
+      },
+      "required": [
+        "topics"
+      ]
+    }
+    ```
+
+    Em resumo: você deve **consolidar apenas sub-tópicos verdadeiramente similares** dentro de cada tópico, mesclando seu conteúdo de forma inteligente para reduzir redundâncias enquanto preserva todas as informações únicas, retornando apenas o JSON final.
+
+    Return your response in this format:
+    ```json
+    {...}
+    ```
+    <!-- END -->
+
+  user_message: >
+    Consolide os sub-tópicos similares do JSON fornecido, preservando todas as informações únicas:
+
+    {content}
+
+    Lembre-se de:
+    1. Manter a estrutura do JSON
+    2. Preservar todo o conteúdo único
+    3. Eliminar apenas redundâncias diretas
+    4. Return your response in this format:
+    ```json
+    {...}
+    ```
+    5. Return only text containing a JSON code block followed by <!-- END --> 
