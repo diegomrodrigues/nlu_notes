@@ -6,13 +6,14 @@ from agent.directory_processor import DirectoryProcessor
 import argparse
 from dotenv import load_dotenv
 
-BASE_DIR = "./01. Transformers"
+BASE_DIR = "./12. Models"
 
 CONTEXT = "Estudo Avançado de Large Language Models e Natural Language Understanding"
 PERSPECTIVES = [
     "Foque nos fundamentos teóricos e matemáticos por trás dos large language models, incluindo modelos probabilísticos, information theory e conceitos matemáticos relevantes.",
     "Foque nos conceitos fundamentais e arquiteturas dos large language models, incluindo attention mechanisms, transformers, tokenization e model architectures.",
-    "Foque nos aspectos práticos de implementação, incluindo training procedures, optimization techniques, deployment strategies e considerações de scaling."
+    "Foque nos aspectos práticos de implementação, incluindo training procedures, optimization techniques, deployment strategies e considerações de scaling.",
+    "Foque nos usos de Reinforcement Learning e técnicas inovadoras de treinamento e optimização de modelos LLMs."
 ]
 
 TARGET_FOLDERS = [
