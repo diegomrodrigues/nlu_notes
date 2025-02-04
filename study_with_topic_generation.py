@@ -10,10 +10,15 @@ BASE_DIR = "./12. Models"
 
 CONTEXT = "Estudo Avançado de Large Language Models e Natural Language Understanding"
 PERSPECTIVES = [
-    "Foque nos fundamentos teóricos e matemáticos por trás dos large language models, incluindo modelos probabilísticos, information theory e conceitos matemáticos relevantes.",
-    "Foque nos conceitos fundamentais e arquiteturas dos large language models, incluindo attention mechanisms, transformers, tokenization e model architectures.",
-    "Foque nos aspectos práticos de implementação, incluindo training procedures, optimization techniques, deployment strategies e considerações de scaling.",
-    "Foque nos usos de Reinforcement Learning e técnicas inovadoras de treinamento e optimização de modelos LLMs."
+    # General Topics
+    "Foque nos conceitos matemáticos e teóricos por de trás dos large language models"
+    "Foque nos conceitos arquiteturais dos large language models, incluindo attention mechanisms, transformers, tokenization, model architectures e outros.",
+    "Foque nos aspectos práticos de implementação, incluindo training procedures, optimization techniques, deployment strategies, considerações de scaling e outros.",
+
+    # Article Topics
+    "Foque nos datasets usados durante o treino e resultados obtidos em cada experimento realizado no paper",
+    "Foque nos prompts e detalhes do modelo usados nos experimentos abordados no paper",
+    "Foque nos diferentes experimentos realizados considerando ablation studies e outros resultados obtidos no paper"
 ]
 
 TARGET_FOLDERS = [

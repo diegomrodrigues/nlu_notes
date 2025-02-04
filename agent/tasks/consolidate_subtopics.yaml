@@ -50,7 +50,24 @@ consolidate_subtopics:
        - Elimine apenas redundâncias diretas e óbvias
        - Organize o conteúdo de forma lógica e fluida
 
-    3. **Resultado Final**
+    3. **Organização Didática**
+       - Estabeleça ordem lógica de apresentação dos tópicos:
+         1. Do fundamental ao aplicado
+         2. Do histórico ao contemporâneo
+         3. Do conceitual ao prático
+         4. Do geral ao específico
+       - Agrupe subtópicos por:
+         * Relações de dependência conceitual
+         * Progressão natural de complexidade
+         * Contexto temporal de aplicação
+         * Fluxo lógico de aprendizagem
+       - Utilize princípios pedagógicos:
+         * Progressão em espiral (revisitar conceitos com profundidade crescente)
+         * Conexões explícitas entre tópicos relacionados
+         * Sequência teoria -> exemplos -> aplicações
+         * Transições suaves entre conceitos
+
+    4. **Resultado Final**
        - Retorne **apenas o JSON** resultante, mantendo a estrutura original:
          ```json
          {
@@ -66,10 +83,24 @@ consolidate_subtopics:
          ```
        - Não inclua texto adicional além do objeto JSON
        - Garanta que o JSON seja válido
-       - Mantenha entre 3-7 sub-tópicos por tópico, exceto quando:
-         - Todos os conceitos forem comprovadamente distintos
-         - Não houver possibilidade lógica de agrupamento
-         - A separação for crucial para compreensão
+       - **Evite tópicos com 1-2 sub-tópicos**:
+         * Redistribua conteúdo entre tópicos relacionados quando necessário
+         * Considere fundir tópicos adjacentes se um ficar com poucos sub-tópicos
+         * Mantenha equilíbrio geral (ex: evitar 1 tópico com 7 sub-tópicos e outro com 1)
+       - Priorize estrutura balanceada:
+         * Ideal: 3-5 tópicos com 3-5 sub-tópicos cada
+         * Permita variação apenas quando justificável
+         * Redistribua conteúdo entre tópicos se necessário para evitar desbalanceamento
+       - **Priorize ordem didática**:
+         * Teoria antes da prática
+         * Conceitos básicos antes de avançados
+         * Causas antes de consequências
+         * Problemas antes de soluções
+         * Simple -> Complexo -> Aplicado
+       - Garanta coerência narrativa:
+         * Cada tópico deve preparar para o próximo
+         * Evitar saltos abruptos de complexidade
+         * Manter fio condutor lógico
 
     ```json
     {
