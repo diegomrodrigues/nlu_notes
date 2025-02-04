@@ -23,7 +23,7 @@ consolidate_subtopics:
     }
     ```
 
-    Seu objetivo é **consolidar apenas sub-tópicos verdadeiramente similares** dentro de cada tópico, mesclando seu conteúdo de forma inteligente para:
+    Seu objetivo é **consolidar apenas sub-tópicos similares** dentro de cada tópico, mesclando seu conteúdo de forma inteligente para:
     1. NUNCA perder qualquer informação única
     2. Reduzir apenas redundâncias óbvias e diretas
     3. Manter a clareza e coesão do texto
@@ -32,7 +32,7 @@ consolidate_subtopics:
     ### Diretrizes para consolidação:
     1. **Identificação de Similaridades**
        - Identifique sub-tópicos que abordam exatamente o mesmo conceito ou tema
-       - Consolide APENAS quando houver sobreposição significativa de conteúdo (>80%)
+       - Consolide APENAS quando houver sobreposição de conteúdo
        - Mantenha sub-tópicos separados quando:
          - Abordarem aplicações diferentes
          - Usarem metodologias distintas
@@ -88,7 +88,7 @@ consolidate_subtopics:
          * Considere fundir tópicos adjacentes se um ficar com poucos sub-tópicos
          * Mantenha equilíbrio geral (ex: evitar 1 tópico com 7 sub-tópicos e outro com 1)
        - Priorize estrutura balanceada:
-         * Ideal: 3-5 tópicos com 3-5 sub-tópicos cada
+         * Ideal: 5-10 tópicos com 3-7 sub-tópicos cada
          * Permita variação apenas quando justificável
          * Redistribua conteúdo entre tópicos se necessário para evitar desbalanceamento
        - **Priorize ordem didática**:
