@@ -24,6 +24,7 @@ PERSPECTIVES = [
 TARGET_FOLDERS = [
 ]
 EXCLUDED_FOLDERS = [
+    "01. Deep Seek Math"
 ]
 
 # Processing parameters

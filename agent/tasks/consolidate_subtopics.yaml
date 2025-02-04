@@ -28,11 +28,14 @@ consolidate_subtopics:
     2. Reduzir apenas redundâncias óbvias e diretas
     3. Manter a clareza e coesão do texto
     4. Preservar sub-tópicos distintos separadamente
+    5. Traduzir todos os nomes de tópicos para inglês
+    6. Consolidar tópicos que tenham o mesmo significado em idiomas diferentes
 
     ### Diretrizes para consolidação:
     1. **Identificação de Similaridades**
        - Identifique sub-tópicos que abordam exatamente o mesmo conceito ou tema
        - Consolide APENAS quando houver sobreposição de conteúdo
+       - Identifique e consolide tópicos que significam a mesma coisa em diferentes idiomas
        - Mantenha sub-tópicos separados quando:
          - Abordarem aplicações diferentes
          - Usarem metodologias distintas
@@ -73,7 +76,7 @@ consolidate_subtopics:
          {
            "topics": [
              {
-               "topic": "Nome do tópico",
+               "topic": "Topic name in English",
                "sub_topics": [
                  "Sub-tópico consolidado com todo o conteúdo único preservado"
                ]
@@ -83,6 +86,8 @@ consolidate_subtopics:
          ```
        - Não inclua texto adicional além do objeto JSON
        - Garanta que o JSON seja válido
+       - Todos os nomes de tópicos devem estar em inglês
+       - Consolide tópicos duplicados em diferentes idiomas
        - **Evite tópicos com 1-2 sub-tópicos**:
          * Redistribua conteúdo entre tópicos relacionados quando necessário
          * Considere fundir tópicos adjacentes se um ficar com poucos sub-tópicos
