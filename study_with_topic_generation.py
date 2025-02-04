@@ -30,7 +30,7 @@ EXCLUDED_FOLDERS = [
 NUM_TOPICS = None
 MAX_WORKERS = 2
 JSONS_PER_PERSPECTIVE = 3
-NUM_CONSOLIDATION_STEPS = 2
+NUM_CONSOLIDATION_STEPS = 1
 MAX_PREVIOUS_TOPICS = 5
 
 def load_tasks_config(tasks_dir: str = './agent/tasks') -> dict:
